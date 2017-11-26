@@ -270,3 +270,6 @@ Narrativia.UI/wwwroot/images/*
 
 # Discard all databases
 *.db
+
+# compiled js
+Narrativia.UI/wwwroot/dist/*.js*
