@@ -13,15 +13,6 @@ namespace Narrativia.Ui.Api
             _pageService = pageService;
         }
         
-//        [HttpGet("{title}")]
-//        public JsonResult Get(string title)
-//        {
-//            var page = _pageService.GetPage(title);
-//            return page == null
-//                ? ErrorResponse()
-//                : SingleResult(page);
-//        }
-        
         [HttpGet("Home")]
         public JsonResult Home()
         {

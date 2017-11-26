@@ -10,7 +10,6 @@ import { BlogPostViewModel } from "../../models/BlogPost";
 
 @Component({
     selector: 'blogPost,[Markdown]',
-    //selector: 'blogPost',
     templateUrl: './blogPost.component.html'
 })
 

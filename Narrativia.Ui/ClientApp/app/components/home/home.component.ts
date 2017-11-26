@@ -6,7 +6,6 @@ import { ResultJson } from "../../models/ResultJson";
 
 @Component({
     selector: 'home,[Markdown]',
-    //selector: 'home',
     templateUrl: './home.component.html'
 })
 
@@ -15,8 +14,7 @@ export class HomeComponent extends BaseComponent {
                 @Inject('BASE_URL') protected baseUrl: string) {
         
         super(baseUrl, http);
-    
-        debugger;
+        
         this.aboutString = '';
         this.loading = true;
         
