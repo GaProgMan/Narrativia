@@ -273,3 +273,4 @@ Narrativia.UI/wwwroot/images/*
 
 # compiled js
 Narrativia.UI/wwwroot/dist/*.js*
+Narrativia.Ui/ClientApp/dist/*.js*
