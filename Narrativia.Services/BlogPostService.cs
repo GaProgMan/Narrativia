@@ -1,0 +1,48 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using Narrativia.Data.Entities;
+using Narrativia.DTO;
+using Narrativia.DTO.BlogPost;
+using Narrativia.Repository;
+using Narrativia.Repository.Data;
+
+namespace Narrativia.Services
+{
+    public class BlogPostService : IBlogPostService
+    {
+        private readonly IRepository<BlogPost> _blogPostRepository;
+
+        public BlogPostService(IRepository<BlogPost> blogPostRepository)
+        {
+            _blogPostRepository = blogPostRepository;
+        }
+
+        public IEnumerable<BlogPostListDto> GetBlogPosts()
+        {
+            // TODO NOT THIS!
+            var blogPosts = _blogPostRepository.GetAll().AsQueryable();
+            return blogPosts.Select(bp => new BlogPostListDto(bp));
+        }
+
+        public BlogPostDto GetBlogPost(uint id)
+        {
+            var dbBlogPost = _blogPostRepository.Get(id);
+            return new BlogPostDto(dbBlogPost);
+        }
+
+        public void InsertBlogPost(BlogPost blogPost)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void UpdateBlogPost(BlogPost blogPost)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void DeleteBlogPost(uint id)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+}

@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narrativia.Ui", "Narrativia.Ui\Narrativia.Ui.csproj", "{6D9154C2-6E81-4379-9AE7-EEEB80015B48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narrativia.Services", "Narrativia.Services\Narrativia.Services.csproj", "{624BE31C-C4A5-4B3C-9253-025E9754686F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narrativia.Repository", "Narrativia.Repository\Narrativia.Repository.csproj", "{40A113A6-9719-4BE4-86FF-F405C153C5E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narrativia.Data", "Narrativia.Data\Narrativia.Data.csproj", "{612F0BD3-2B18-4ACB-B759-B57D0ABBC3FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narrativia.DTO", "Narrativia.DTO\Narrativia.DTO.csproj", "{DCE6F23F-064B-474D-A41A-D495BF02C7C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D9154C2-6E81-4379-9AE7-EEEB80015B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D9154C2-6E81-4379-9AE7-EEEB80015B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{624BE31C-C4A5-4B3C-9253-025E9754686F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{624BE31C-C4A5-4B3C-9253-025E9754686F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A113A6-9719-4BE4-86FF-F405C153C5E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A113A6-9719-4BE4-86FF-F405C153C5E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612F0BD3-2B18-4ACB-B759-B57D0ABBC3FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612F0BD3-2B18-4ACB-B759-B57D0ABBC3FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Debug|x64.ActiveCfg = Debug|x64
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Debug|x64.Build.0 = Debug|x64
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Debug|x86.ActiveCfg = Debug|x86
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Debug|x86.Build.0 = Debug|x86
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Release|x64.ActiveCfg = Release|x64
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Release|x64.Build.0 = Release|x64
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Release|x86.ActiveCfg = Release|x86
+		{DCE6F23F-064B-474D-A41A-D495BF02C7C4}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal

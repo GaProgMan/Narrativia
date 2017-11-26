@@ -1,0 +1,28 @@
+<div class='row'>
+    <div class='col-sm-2'></div>
+    <div class='col-sm-10'>
+        <div *ngIf="loading" class="loader"></div>
+    </div>
+    <div class='col-sm-2'></div>
+</div>
+<div *ngIf='!loading' class='blog-post'>
+    <header class="header">
+        <div class='boxed-layout-header page-header header-small'>
+            <div class='header-filter'>
+                <img src='{{ blogPost.headerImageUrl }}' class='img-responsive'>
+            </div>
+            <div class='container'>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                        <h1 class="blog-title">{{ blogPost.title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class='row'>
+        <div class='col-xs-12'>
+            <markdown [data]='blogPost.bodyText'></markdown>
+        </div>
+    </div>
+</div>

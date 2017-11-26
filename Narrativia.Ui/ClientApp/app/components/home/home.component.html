@@ -1,0 +1,9 @@
+<div *ngIf="loading" class="loader"></div>
+
+<div *ngIf="!loading">
+    <markdown [data]='aboutString'></markdown>
+</div>
+
+<div class='container-fluid'>
+    <blogPostList></blogPostList>
+</div>

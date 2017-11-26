@@ -1,0 +1,22 @@
+.page-header.header-small {
+    min-height: 300px;
+    position: relative;
+    height: auto;
+}
+
+
+.page-header.header-small .container .blog-title {
+    margin: 20px 0 10px;
+    font-family: Open Sans;
+}
+
+.header-filter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: center center;
+    background-size: cover;
+}

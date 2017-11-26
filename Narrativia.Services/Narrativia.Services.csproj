@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Narrativia.Data\Narrativia.Data.csproj">
+      <Project>{612F0BD3-2B18-4ACB-B759-B57D0ABBC3FD}</Project>
+      <Name>Narrativia.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Narrativia.DTO\Narrativia.DTO.csproj" />
+    <ProjectReference Include="..\Narrativia.Repository\Narrativia.Repository.csproj">
+      <Project>{40A113A6-9719-4BE4-86FF-F405C153C5E3}</Project>
+      <Name>Narrativia.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
