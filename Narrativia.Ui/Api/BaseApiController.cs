@@ -41,19 +41,15 @@ namespace Narrativia.Ui.Api
         }
 
         [HttpGet("Version")]
-        public string Version()
+        public JsonResult Version()
         {
-            return Assembly.GetEntryAssembly()
-                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                .InformationalVersion;
-        }
-
-        [HttpGet("About")]
-        public JsonResult About()
-        {
-            // TODO get this information from a service (i.e. from the db)
-            return MessageResult(
-                @"<p>Welcome to my blogging platform. I call it Narrativia</p><p>Not to be confused with the Production company of the same name, but it does have the <a href='https://wiki.lspace.org/mediawiki/Narrativia_(goddess)' target='_blank' rel='noopener'>same root</a></p>");
+            return Json(new
+            {
+                Success = true,
+                Result = Assembly.GetEntryAssembly()
+                    .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                    .InformationalVersion
+            });
         }
     }
 }
