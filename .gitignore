@@ -259,5 +259,14 @@ paket-files/
 # Sqlite databases
 *.db
 
+# Rider chaff
 .idea/
+
+# .NET Core template chaff
 .template-config/
+
+# Discard all images
+Narrativia.UI/wwwroot/images/*
+
+# Discard all databases
+# *.db
