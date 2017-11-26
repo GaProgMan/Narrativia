@@ -269,4 +269,4 @@ paket-files/
 Narrativia.UI/wwwroot/images/*
 
 # Discard all databases
-# *.db
+*.db
