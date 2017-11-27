@@ -57,7 +57,13 @@ Apply all migrations to the database by running the following commands (from the
 
     dotnet ef database update -c DataContext -p ../Narrativia.Repository/Narrativia.Repository.csproj -s Narrativia.Ui.csproj
 
-3. Run the application and seed the database
+3. Restore all npm packages
+
+Issue the following command from the `Narrativia.Ui` directory:
+
+    npm install
+
+4. Run the application and seed the database
 
 Issue the following command from the `Narrativia.Ui` directory:
 
