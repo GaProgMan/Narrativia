@@ -5,10 +5,10 @@
     </div>
     <div class='col-sm-2'></div>
 </div>
-<div *ngIf='!loading' class='blog-post'>
+<div *ngIf='!loading' id="blogPost">
     <header class="header">
-        <div class='boxed-layout-header page-header header-small'>
-            <div class='header-filter'>
+        <div id='headerImageWrapper'>
+            <div id='headerImageContainer'>
                 <img src='{{ blogPost.headerImageUrl }}' class='img-responsive'>
             </div>
             <div class='container'>
