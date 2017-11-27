@@ -27,6 +27,13 @@ Narrativia has a Code of Conduct which all contributors, maintainers and forkers
 
 See [Code of Conduct.md](Code-of-Conduct.md) for details.
 
+## Requirements
+
+Narrativia requires the following software to be installed on the dev machine in order to build it:
+
+ - [.NET Core SDK 2.0+](dot.net/core)
+ - [NodeJs LTS](https://nodejs.org/en/)
+
 ## Running The Application
 
 1. Ensure that the `appsettings.json` file contains a valid `ConnectionStrings` section.
