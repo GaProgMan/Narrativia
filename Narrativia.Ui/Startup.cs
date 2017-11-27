@@ -1,3 +1,4 @@
+using ClacksMiddleware.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -44,6 +45,9 @@ namespace Narrativia.Ui
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            
+            //"Do you not know that a man is not dead while his name is still spoken?"
+            app.GnuTerryPratchett();
 
             app.UseStaticFiles();
 
