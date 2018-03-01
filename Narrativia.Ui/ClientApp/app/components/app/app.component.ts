@@ -1,3 +1,13 @@
+// import { Component } from '@angular/core';
+//
+// @Component({
+//     selector: 'app',
+//     templateUrl: './app.component.html',
+//     styleUrls: ['./app.component.css']
+// })
+// export class AppComponent {
+// }
+
 import { Inject } from '@angular/core';
 import { Component } from '@angular/core';
 import { Http } from "@angular/http";
@@ -22,13 +32,12 @@ export class AppComponent extends BaseComponent{
     }
 
     private versionString: string;
-
-    private getVersionString = () => {
+    
+    private getVersionString =() => {
         let route = `${this.apiUrl()}version`;
         this.http.get(route).subscribe(
             data => {
                 let result = data.json() as ResultJson;
-                debugger;
                 if (result.success) {
                     this.versionString = result.result;
                 }

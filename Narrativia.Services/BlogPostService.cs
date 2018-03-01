@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Narrativia.Data.Entities;
 using Narrativia.DTO;
 using Narrativia.DTO.BlogPost;
@@ -30,14 +31,22 @@ namespace Narrativia.Services
             return new BlogPostDto(dbBlogPost);
         }
 
+        public Task<bool> IncreaseViewCount(uint id)
+        {
+            var dbBlogPost = _blogPostRepository.Get(id);
+            dbBlogPost.Views += 1;
+            return UpdateBlogPost(dbBlogPost);
+        }
+
         public void InsertBlogPost(BlogPost blogPost)
         {
             throw new System.NotImplementedException();
         }
 
-        public void UpdateBlogPost(BlogPost blogPost)
+        public async Task<bool> UpdateBlogPost(BlogPost blogPost)
         {
-            throw new System.NotImplementedException();
+            _blogPostRepository.Update(blogPost);
+            return await _blogPostRepository.SaveChangesAsync() > 0;
         }
 
         public void DeleteBlogPost(uint id)

@@ -1,6 +1,6 @@
 ﻿namespace Narrativia.DTO.BlogPost
 {
-    public class BlogPostListDto : BlogPostBaseDto
+    public class BlogPostListDto : BaseContentDto
     {
         public BlogPostListDto(Data.Entities.BlogPost dbPost)
         {

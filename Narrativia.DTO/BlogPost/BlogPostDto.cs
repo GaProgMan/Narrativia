@@ -1,6 +1,6 @@
 ﻿namespace Narrativia.DTO.BlogPost
 {
-    public class BlogPostDto : BlogPostBaseDto
+    public class BlogPostDto : BaseContentDto
     {
         public BlogPostDto(Data.Entities.BlogPost dbPost)
         {
@@ -9,7 +9,5 @@
             HeaderImageUrl = dbPost.HeaderImageUrl;
             BodyText = dbPost.BodyText;
         }
-        
-        public string BodyText { get; set; }
     }
 }

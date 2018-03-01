@@ -1,8 +1,9 @@
 ﻿namespace Narrativia.Data.Entities
 {
-    public class Page : BaseAuditClass
+    public class Page : ContentPage
     {
-        public string Title { get; set; }
-        public string BodyText { get; set; }
+        public string DisplayName { get; set; }
+        public string IconIdentifier { get; set; }
+        public bool VisibleInHeader { get; set; }
     }
 }

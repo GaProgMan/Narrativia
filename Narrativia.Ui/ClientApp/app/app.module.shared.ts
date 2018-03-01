@@ -11,6 +11,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { BlogPostComponent } from "./components/blogPost/blogPost.component";
 import { BlogPostListComponent } from "./components/blogPostList/blogPostList.component";
+import { PageComponent} from "./components/page/page.component";
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { BlogPostListComponent } from "./components/blogPostList/blogPostList.co
         NavMenuComponent,
         HomeComponent,
         BlogPostComponent,
-        BlogPostListComponent
+        BlogPostListComponent,
+        PageComponent
     ],
     imports: [
         CommonModule,
@@ -29,6 +31,7 @@ import { BlogPostListComponent } from "./components/blogPostList/blogPostList.co
             { path: 'home', component: HomeComponent },
             { path: 'blogPostList', component: BlogPostListComponent },
             { path: 'blogPost/:id', component: BlogPostComponent },
+            { path: 'page/:pageTitle', component: PageComponent },
             { path: '**', redirectTo: 'home' }
         ]),
         MarkdownModule.forRoot()

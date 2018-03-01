@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Narrativia.Data.Entities;
 
@@ -63,9 +64,14 @@ namespace Narrativia.Repository.Data
             entities.Remove(entity);              
         }  
   
-        public void SaveChanges()  
+        public int SaveChanges()  
         {  
-            context.SaveChanges();  
-        }  
+            return context.SaveChanges();
+        }
+
+        public Task<int> SaveChangesAsync()
+        {
+            return context.SaveChangesAsync();
+        }
     }
 }

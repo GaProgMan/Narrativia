@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Narrativia.Services;
 
 namespace Narrativia.Ui.Api
@@ -29,6 +32,13 @@ namespace Narrativia.Ui.Api
             return blogPosts == null
                 ? ErrorResponse()
                 : MultipleResults(blogPosts);
+        }
+
+        [HttpGet("view")]
+        public async Task<JsonResult> View(uint id)
+        {
+            var response = await _blogPostService.IncreaseViewCount(id);
+            return BoolResponse(response, string.Empty);
         }
     }
 }

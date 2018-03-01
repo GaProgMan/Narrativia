@@ -11,9 +11,10 @@ using System;
 namespace Narrativia.Repository.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20180301211624_AddedDisplayNameToPageRecords")]
+    partial class AddedDisplayNameToPageRecords
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -88,10 +89,6 @@ namespace Narrativia.Repository.Migrations
 
                     b.Property<string>("DisplayName")
                         .IsRequired();
-
-                    b.Property<string>("HeaderImageUrl");
-
-                    b.Property<string>("IconIdentifier");
 
                     b.Property<DateTime>("Modified");
 

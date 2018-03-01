@@ -34,20 +34,20 @@ export class BlogPostComponent extends BaseComponent {
             let route = `${this.apiUrl()}BlogPost/${this.blogPostId}`;
 
             this.http.get(route).subscribe(
-                data => {
+             data => {
 
-                    let resultJson = data.json() as ResultJson;
-                    if(resultJson.success) {
-
-                        let serverPost = <IApiBlogPost>data.json().result;
-                        this.blogPost = new BlogPostViewModel(serverPost.title, serverPost.headerImageUrl,
-                            serverPost.id, serverPost.bodyText);
-                        this.loading = false;
-                    }
-                },
-                error =>{
-                    debugger;
-                });
+                 let resultJson = data.json() as ResultJson;
+                 if(resultJson.success) {
+                     
+                     let serverPost = <IApiBlogPost>data.json().result;
+                     this.blogPost = new BlogPostViewModel(serverPost.title, serverPost.headerImageUrl,
+                         serverPost.id, serverPost.bodyText);
+                     this.loading = false;
+                 }
+             },
+             error =>{
+                 debugger;
+             });
         });
     }
 }

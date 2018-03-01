@@ -8,6 +8,15 @@ namespace Narrativia.Ui.Api
     [Route("/api")]
     public class BaseApiController : Controller
     {
+        protected JsonResult BoolResponse(bool success, string message)
+        {
+            return Json(new
+            {
+                Success = success,
+                Result = message ?? string.Empty
+            });
+        }
+        
         protected JsonResult ErrorResponse(string message = "Not Found")
         {
             return Json (new {
@@ -24,7 +33,7 @@ namespace Narrativia.Ui.Api
             });
         }
 
-        protected JsonResult SingleResult(BaseDto singleResult)
+        protected JsonResult SingleResult(BaseContentDto singleResult)
         {
             return Json(new {
                 Success = true,
@@ -32,7 +41,7 @@ namespace Narrativia.Ui.Api
             });
         }
 
-        protected JsonResult MultipleResults(IEnumerable<BaseDto> multipleResults)
+        protected JsonResult MultipleResults(IEnumerable<BaseContentDto> multipleResults)
         {
             return Json(new {
                 Success = true,
@@ -43,8 +52,7 @@ namespace Narrativia.Ui.Api
         [HttpGet("Version")]
         public JsonResult Version()
         {
-            return Json(new
-            {
+            return Json(new {
                 Success = true,
                 Result = Assembly.GetEntryAssembly()
                     .GetCustomAttribute<AssemblyInformationalVersionAttribute>()

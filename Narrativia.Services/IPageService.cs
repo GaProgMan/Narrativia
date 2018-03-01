@@ -9,6 +9,7 @@ namespace Narrativia.Services
         IEnumerable<Page> GetPages();
         PageDto GetPage(uint id);
         PageDto GetPage(string title);
+        IEnumerable<PageDto> GetPagesForHeader();
         void InsertPage(Page page);
         void UpdatePage(Page page);
         void DeletePAge(uint id);

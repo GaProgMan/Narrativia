@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Narrativia.Data.Entities;
 using Narrativia.DTO;
 using Narrativia.DTO.BlogPost;
@@ -9,8 +10,9 @@ namespace Narrativia.Services
     {
         IEnumerable<BlogPostListDto> GetBlogPosts();
         BlogPostDto GetBlogPost(uint id);
+        Task<bool> IncreaseViewCount(uint id);
         void InsertBlogPost(BlogPost blogPost);
-        void UpdateBlogPost(BlogPost blogPost);
+        Task<bool> UpdateBlogPost(BlogPost blogPost);
         void DeleteBlogPost(uint id);
     }
 }

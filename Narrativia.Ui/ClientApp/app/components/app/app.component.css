@@ -1,11 +1,11 @@
  .body-content {
-    padding-top: 50px;
+    padding-top: 49px;
 }
- 
- footer #centre-footer {
+
+ #footerWrapper{
      text-align: center;
  }
- 
- footer #centre-footer p {
+
+ #footerWrapper #footerContainer {
      display: inline-block;
  }

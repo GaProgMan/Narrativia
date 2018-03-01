@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Narrativia.Data.Entities;
-using Narrativia.Repository.Data.Mapping;
+using Narrativia.Data.Mapping;
 using Narrativia.Repository.Extensions;
 
 namespace Narrativia.Repository.Data

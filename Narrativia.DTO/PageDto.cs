@@ -2,15 +2,18 @@
 
 namespace Narrativia.DTO
 {
-    public class PageDto : BaseDto
+    public class PageDto : BaseContentDto
     {
         public PageDto(Page dbPage)
         {
             Title = dbPage.Title;
             BodyText = dbPage.BodyText;
+            DisplayName = dbPage.DisplayName;
+            IconIdentifier = dbPage.IconIdentifier;
+            HeaderImageUrl = dbPage.HeaderImageUrl;
         }
         
-        public string Title { get; set; }
-        public string BodyText { get; set; }
+        public string DisplayName { get; set; }
+        public string IconIdentifier { get; set; }
     }
 }

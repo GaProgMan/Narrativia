@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Narrativia.Data.Entities;
 using Narrativia.DTO;
@@ -28,7 +29,16 @@ namespace Narrativia.Services
 
         public PageDto GetPage(string title)
         {
-            throw new System.NotImplementedException();
+            var dbPage = _pageRepository.GetAll()
+                .FirstOrDefault(p => string.Equals(p.Title, title, StringComparison.InvariantCulture));
+            return new PageDto(dbPage);
+        }
+
+        public IEnumerable<PageDto> GetPagesForHeader()
+        {
+            var dbPages = _pageRepository.GetAll()
+                .Where(p => p.VisibleInHeader);
+            return dbPages.Select(p => new PageDto(p));
         }
 
         public void InsertPage(Page page)

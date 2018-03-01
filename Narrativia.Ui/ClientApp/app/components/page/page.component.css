@@ -1,9 +1,9 @@
 /* Vertically center the header image */
 
-#blogPost #headerImageWrapper{
+#page #headerImageWrapper{
     text-align: center;
 }
 
-#blogPost #headerImageWrapper #headerImageContainer {
+#page #headerImageWrapper #headerImageContainer {
     display: inline-block;
 }
